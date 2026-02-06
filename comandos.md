@@ -20,3 +20,6 @@ npm i express-async-errors@3.1.1
 
 
 -- AULA 03 (Adicionando Zod)
+
+## instalar zod
+npm i zod@3.23.8
