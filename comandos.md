@@ -49,3 +49,6 @@ npx prisma migrate dev
 
 Abrir prisma studio
 npx prisma studio
+
+-- Instalando bcrypt
+npm i bcrypt@5.1.1
