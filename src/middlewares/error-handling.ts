@@ -1,12 +1,12 @@
-import { Request, Response, NextFunction } from "express";
-import { AppError } from "@/utils/AppError";
-import { ZodError } from "zod";
+import { Request, Response, NextFunction } from 'express';
+import { AppError } from '@/utils/AppError';
+import { ZodError } from 'zod';
 
 export function errorHandling(
   error: any,
   request: Request,
   response: Response,
-  next: NextFunction,
+  next: NextFunction
 ) {
   if (error instanceof AppError) {
     return response.status(error.statusCode).json({
@@ -16,7 +16,7 @@ export function errorHandling(
 
   if (error instanceof ZodError) {
     return response.status(400).json({
-      message: "Validation error",
+      message: 'Validation error',
       issues: error.format(),
     });
   }
