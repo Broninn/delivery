@@ -1,3 +1,9 @@
+## Iniciar o projeto
+
+-- Validar se docker está rodando
+-- npm run dev
+--
+
 -- AULA 01 (Criando o projeto)
 
 ## iniciar projeto
@@ -52,3 +58,5 @@ npx prisma studio
 
 -- Instalando bcrypt
 npm i bcrypt@5.1.1
+
+-- Instalando Json Web Token
