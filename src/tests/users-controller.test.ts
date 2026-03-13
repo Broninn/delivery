@@ -24,4 +24,15 @@ describe('UsersController', () => {
 
     user_id = response.body.id;
   });
+
+  it('should throw an error when trying to create a user with an existing email', async () => {
+    const response = await request(app).post('/users').send({
+      name: 'Duplicate User',
+      email: 'jane.doe@example.com',
+      password: 'password456',
+    });
+
+    expect(response.status).toBe(400);
+    expect(response.body.message).toBe('Email is already in use.');
+  });
 });
