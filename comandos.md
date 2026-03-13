@@ -66,3 +66,6 @@ npm i jest@29.7.0 @types/jest@29.5.13 ts-jest@29.2.5 -D
 
 -- instalando supertes
 npm i supertest@7.0.0 @types/supertest@6.0.2 -D
+
+-- instalando ts node
+npm i ts-node@10.9.2 -D
