@@ -35,4 +35,15 @@ describe('UsersController', () => {
     expect(response.status).toBe(400);
     expect(response.body.message).toBe('Email is already in use.');
   });
+
+  it('should throw a validation error if email is invalid', async () => {
+    const response = await request(app).post('/users').send({
+      name: 'Invalid Email User',
+      email: 'invalid-email',
+      password: 'password789',
+    });
+
+    expect(response.status).toBe(400);
+    expect(response.body.message).toBe('Validation error');
+  });
 });
