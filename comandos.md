@@ -69,3 +69,6 @@ npm i supertest@7.0.0 @types/supertest@6.0.2 -D
 
 -- instalando ts node
 npm i ts-node@10.9.2 -D
+
+-- convertendo ts para js para build
+npm i tsup@8.3.0 -D
